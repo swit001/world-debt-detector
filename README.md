@@ -54,6 +54,8 @@ wdebt scan ./agents
 
 ## Sample Output
 
+![World Debt Score](assets/world-debt-score.svg)
+
 ```
 World Debt Score: [█████████████████░░░] 87/100
 
