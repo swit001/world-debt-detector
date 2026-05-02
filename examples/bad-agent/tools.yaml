@@ -1,0 +1,23 @@
+tools:
+  - name: refundPayment
+    description: Issues a refund to the customer's original payment method.
+    parameters:
+      order_id:
+        type: string
+        description: The order to refund
+      amount:
+        type: number
+        description: Refund amount in USD
+      reason:
+        type: string
+        description: Reason for the refund
+
+  - name: cancelOrder
+    description: Cancels an open order in the system.
+    parameters:
+      order_id:
+        type: string
+        description: The order to cancel
+      reason:
+        type: string
+        description: Reason for cancellation

@@ -1,0 +1,22 @@
+{
+  "verdict": "DENY",
+  "request": {
+    "type": "refund",
+    "order_id": "ORD-9821",
+    "amount": 89.99,
+    "customer_id": "CUST-4401"
+  },
+  "evaluated_at": "2026-05-01T14:32:00Z",
+  "failed_guards": [
+    {
+      "constraint_id": "C002",
+      "description": "Refunds after 30 days are denied",
+      "actual_value": "days_since_delivery = 38"
+    }
+  ],
+  "next_state": null,
+  "audit_ref": "audit-event-2026-05-01-93821",
+  "approver": null,
+  "approval_required": false,
+  "escalation_path": null
+}
