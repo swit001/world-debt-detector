@@ -25,6 +25,16 @@ flowchart TD
     D["ESTC World Model<br/>entity · state · transition · constraint"]
 
     A --> B --> C --> D
+
+    classDef input fill:#F4F7FB,stroke:#7B8794,stroke-width:1px,color:#111827;
+    classDef scan fill:#EAF3FF,stroke:#2F80ED,stroke-width:2px,color:#0B1F33;
+    classDef report fill:#FFF4E5,stroke:#F2994A,stroke-width:2px,color:#2D1B00;
+    classDef world fill:#EAFBF3,stroke:#27AE60,stroke-width:2px,color:#0B2E1A;
+
+    class A input;
+    class B scan;
+    class C report;
+    class D world;
 ~~~
 
 ## Quickstart
