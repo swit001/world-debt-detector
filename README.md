@@ -33,34 +33,40 @@ wdebt scan ./agents
 ## Sample Output
 
 ```
-World Debt Score: [████████████████░░░░] 74/100
+World Debt Score: [█████████████████░░░] 87/100
 
 Detected anti-patterns:
-  - Guard as Prompt: 4 occurrences
-  - State as Text: 7 occurrences
+  - State as Text: 1 occurrence
+  - Transition-less Action: 4 occurrences
+  - Guard as Prompt: 2 occurrences
+  - Belief-Commit Confusion: 1 occurrence
   - No Verdict Contract: 1 occurrence
-  - Tool Call as Commit: 3 occurrences
+  - Approval as Chat: 1 occurrence
+  - Audit as Afterthought: 1 occurrence
 
 ESTC coverage:
-  Entity:     partial
-  State:      weak
-  Transition: missing
-  Constraint: prompt-only
-  Verdict:    missing
-  Audit:      missing
+  Entity:     missing     
+  State:      weak        
+  Transition: missing     
+  Constraint: prompt-only 
+  Verdict:    missing     
+  Audit:      missing     
 
 Top findings:
-  1. system-prompt.md:5: "Never refund after 7 days without manager approval."
-  2. tools.yaml:3: "- name: refundPayment"
-  3. workflow.md:8: "tool call completed"
-  4. system-prompt.md:12: "ask manager before proceeding"
-  5. (directory): "No ALLOW / DENY / ESCALATE / verdict / failed_guards / next_state found across agent files"
+  1. system-prompt.md:26: "1. Pull up the order. If it seems delivered, ask the customer to confirm receipt."
+  2. tools.yaml:2: "- name: refundPayment"
+  3. tools.yaml:15: "- name: cancelOrder"
+  4. workflow.md:12: "4. If eligible, the agent calls `refundPayment` with the order ID and amount."
+  5. workflow.md:19: "3. If the order is still open, the agent calls `cancelOrder`."
 
 Recommendations:
-  - Move prompt-only constraints into executable guards with structured ALLOW/DENY output.
   - Replace vague state language with committed, typed state from a world model.
+  - Declare source and target states for every action in tool configs.
+  - Move prompt-only constraints into executable guards with structured ALLOW/DENY output.
+  - Separate belief state (inferred) from committed state (persisted).
   - Return structured ALLOW / DENY / ESCALATE verdicts from agent decision points.
-  - Treat tool calls as intents, not commits — add audit_ref and state transition on success.
+  - Replace chat-based approval with a declared approval_state and escalation path.
+  - Emit an audit event for every state-changing action.
 ```
 
 ---
