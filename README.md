@@ -193,13 +193,17 @@ Rules are applied based on file type to reduce false positives:
 
 ---
 
-## Related Projects
+## From Detection to Anti-Patterns
 
-- [World Model Anti-Patterns](https://github.com/swit001/world-model-anti-patterns) — the catalog of anti-patterns this tool detects
-- [Agentic World Model](https://github.com/swit001/agentic-world-model) — the theoretical framework
-- [ESTC World Model Runtime](https://github.com/swit001/estc-world-model) — a runtime implementation of ESTC
+This CLI measures world-model debt.  
+[World Model Anti-Patterns](https://github.com/swit001/world-model-anti-patterns) explains the failure modes behind each finding.
 
----
+## World Model Ecosystem
+
+- [Agentic World Model](https://github.com/swit001/agentic-world-model) — map: executable world specification toolkit
+- [ESTC World Model Runtime](https://github.com/swit001/estc-world-model) — engine: Python runtime and schema export
+- [World Model Anti-Patterns](https://github.com/swit001/world-model-anti-patterns) — why it matters: failure catalog
+- [World Debt Detector](https://github.com/swit001/world-debt-detector) — measure it: CLI scanner for implicit world-model debt
 
 ## License
 
