@@ -15,6 +15,18 @@ World Debt Detector scans prompts, tools, configs, and workflows for hidden worl
 
 ---
 
+## How it works
+
+~~~mermaid
+flowchart TD
+    A["Agent files<br/>prompts · tools · configs · workflows"]
+    B["wdebt scan &lt;path&gt;"]
+    C["World Debt Report<br/>score · anti-patterns · recommendations"]
+    D["ESTC World Model<br/>entity · state · transition · constraint"]
+
+    A --> B --> C --> D
+~~~
+
 ## Quickstart
 
 ```bash
