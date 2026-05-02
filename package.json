@@ -2,7 +2,13 @@
   "name": "world-debt-detector",
   "version": "0.1.0",
   "description": "Detect implicit world-model debt in AI agent systems.",
-  "keywords": ["ai", "agents", "world-model", "static-analysis", "cli"],
+  "keywords": [
+    "ai",
+    "agents",
+    "world-model",
+    "static-analysis",
+    "cli"
+  ],
   "license": "Apache-2.0",
   "author": "Josh Lee",
   "type": "module",
@@ -11,13 +17,16 @@
     "wdebt": "./dist/index.js"
   },
   "main": "./dist/index.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/index.ts",
     "test": "vitest run",
     "test:watch": "vitest",
-    "prepublishOnly": "pnpm run build"
+    "prepublishOnly": "pnpm run build",
+    "wdebt": "node dist/index.js"
   },
   "dependencies": {
     "commander": "^12.1.0",
