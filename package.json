@@ -1,6 +1,6 @@
 {
   "name": "world-debt-detector",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Detect implicit world-model debt in AI agent systems.",
   "keywords": [
     "ai",
@@ -43,7 +43,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/swit001/world-debt-detector"
+    "url": "git+https://github.com/swit001/world-debt-detector.git"
   },
   "homepage": "https://github.com/swit001/world-debt-detector#readme",
   "bugs": {
